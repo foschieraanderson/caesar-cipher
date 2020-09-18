@@ -1,8 +1,8 @@
 import requests
 from utils.config import Token
 
-def postJson(url, file):
-  url = url+Token
+def postUrl(url, file):
+  post_url = url+Token
   data = {'answer': open(file,'rb')}
-  response = requests.post(url, files=data)
+  response = requests.post(post_url, files=data)
   return response
